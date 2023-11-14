@@ -1,0 +1,36 @@
+div {
+  text-align: center;
+}
+div p {
+  font-size: larger;
+  font-weight: bold;
+}
+div button {
+  border: 0;
+  border-radius: 10px;
+  width: 170px;
+  padding: 10px;
+  margin: 10px;
+  font-weight: bold;
+}
+div #redbutton {
+  background-color: red;
+}
+div #yellowbutton {
+  background-color: yellow;
+}
+div #greenbutton {
+  background-color: green;
+}
+
+.rojo{
+  color: red;
+}
+
+.yellow{
+  color: yellow
+}
+
+.green{
+  color: green;
+}
