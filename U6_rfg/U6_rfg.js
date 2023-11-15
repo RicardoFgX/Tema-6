@@ -7,7 +7,7 @@ let zoomIn = document.getElementById("zoomIn");
 let zoomOut = document.getElementById("zoomOut");
 let colores = document.getElementById("colores");
 
-function inicio(){
+function inicio() {
     cuadroCentral.firstElementChild.width = 150;
 }
 
@@ -52,10 +52,12 @@ function reducir(e) {
 colores.addEventListener("mouseover", cambiarColor)
 
 function cambiarColor(e) {
+    console.log(e.target.className);
     if (e.target.classList.contains("negro") || e.target.classList.contains("rojo") ||
         e.target.classList.contains("azul") || e.target.classList.contains("amarillo") ||
         e.target.classList.contains("verde") || e.target.classList.contains("rosa")) {
-        cuadroCentral.style.borderColor = e.target.className;
+        console.log("hola");
+        cuadroCentral.style.border = e.target.style.backgroundColor;
     }
 }
 
