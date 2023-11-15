@@ -10,9 +10,11 @@ body #container #lateralIzquierdo {
   margin-top: 120px;
   width: 10vw;
   max-width: 200px;
-}
-body #container #lateralIzquierdo img {
-  width: auto;
+  /*
+  img {
+    width: auto;
+  }
+  */
 }
 body #container #cuadroCentral {
   grid-area: centro;
@@ -32,7 +34,7 @@ body #container #cuadroCentral #cuadro {
   height: 50vh;
 }
 body #container #cuadroCentral #cuadro img {
-  width: 200px;
+  max-width: 450px;
 }
 body #container #lateralDerecho {
   display: flex;
@@ -40,9 +42,11 @@ body #container #lateralDerecho {
   margin-top: 120px;
   width: 20vw;
   max-width: 300px;
-}
-body #container #lateralDerecho img {
-  width: auto;
+  /*
+  img {
+    width: auto;
+  }
+  */
 }
 body footer {
   display: flex;
