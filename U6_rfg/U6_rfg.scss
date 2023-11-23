@@ -1,100 +1,107 @@
 body {
 
+  //Propiedades del contenedor (toda la pantalla)
   #container {
     margin: 0;
     display: grid;
     grid-template-areas: "izquierda centro derecha";
     justify-content: space-around;
 
+    //Propiedades general de la sección lateral izquierdo
     #lateralIzquierdo {
+      grid-area: izquierda;
       display: flex;
       flex-direction: column;
       margin-top: 120px;
       width: 10vw;
       max-width: 200px;
-      /*
+
+      //Propiedades de las imagenes izquierda
       img {
-        width: auto;
+        margin-bottom: 20px;
       }
-      */
     }
 
-    #cuadroCentral {
+    //Propiedades generales contenedor central
+    #contenedorCentral {
       grid-area: centro;
 
+      //Propiedades texto al inicio del cuadro central
       h1 {
         margin: 30px;
         text-align: center;
         font-size: 50px;
       }
 
+      //Propiedades cuadro
       #cuadro {
         display: flex;
         justify-content: center;
         align-items: center;
-        border: 10px solid black;
+        border: 10px solid;
+        border-color: black;
         width: 60vw;
         height: 50vh;
 
-
-        img{
-          //width: 200px;
-          max-width: 450px;
-        }
       }
 
     }
 
+    //Propiedades generales lateral derecho
     #lateralDerecho {
+      grid-area: derecha;
       display: flex;
       flex-direction: column;
       margin-top: 120px;
       width: 20vw;
       max-width: 300px;
 
-      /*
+      //Propiedades imagenes derecha
       img {
-        width: auto;
+        margin-bottom: 10px;
       }
-      */
     }
   }
 
+  //Propiedades generales footer
   footer {
     display: flex;
     flex-direction: row;
     justify-content: space-around;
     margin: 30px;
 
+    //Propiedades cada cuadrado de color
     div {
       width: 15vw;
       height: 10vh;
       margin: 5px;
       border: 2px solid black;
+
+
+    }
+    //A continuación todas las clases para los coleres de los cuadros
+    .black {
+      background-color: black;
+    }
+
+    .red {
+      background-color: red;
+    }
+
+    .blue {
+      background-color: blue;
+    }
+
+    .yellow {
+      background-color: yellow;
+    }
+
+    .green {
+      background-color: green;
+    }
+
+    .pink {
+      background-color: pink;
     }
   }
-}
-
-.negro {
-  background-color: black;
-}
-
-.rojo {
-  background-color: red;
-}
-
-.azul {
-  background-color: blue;
-}
-
-.amarillo {
-  background-color: yellow;
-}
-
-.verde {
-  background-color: green;
-}
-
-.rosa {
-  background-color: pink;
 }
