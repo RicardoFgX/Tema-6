@@ -1,20 +1,25 @@
+//Variables para las imagenes gustar y no gustar
 let imgLike = document.getElementById("like");
 let imgDislike = document.getElementById("dislike");
 
+//Se recoge el valor del contador de likes del html
 let contadorLikes = document.getElementById("contadorLikes");
 let likes = parseInt(contadorLikes.textContent);
+//Se recoge el valor del contador de dislikes del html
 let contadorDislikes = document.getElementById("contadorDislikes");
 let dislikes = parseInt(contadorDislikes.textContent);
 
+//Variable para el boton de contacto
 let contactar = document.getElementById("boton");
-console.log(contactar);
+//Variable para el campo 'div' donde se colocaran los elementos del formulario
 let formulario = document.getElementById("formulario");
 
+//EventListener para la imagen de like al hacer click en esta
 imgLike.addEventListener("click", pulsarLike);
-console.log(imgLike);
 
+//Función para cambiar la foto like entre 'pulsada' y 'sin pulsar'. Además tambien aumenta el contador de likes en caso de estar pulsado.
 function pulsarLike(e) {
-    if (e.target.src != "file:///C:/Users/usuario_ma%C3%B1ana/Desktop/Cliente/Tema%206/examen2/img/gusta.png") {
+    if (e.target.src.includes("img/gusta2.png")) {
         e.target.src = "img/gusta.png";
         contadorLikes.textContent = likes + 1;
     } else{
@@ -23,11 +28,12 @@ function pulsarLike(e) {
     }
 }
 
+//EventListener para la imagen de dislike al hacer click en esta
 imgDislike.addEventListener("click", pulsarDislike);
-console.log(imgDislike);
 
+//Función para cambiar la foto dislike entre 'pulsada' y 'sin pulsar'. Además tambien aumenta el contador de dislikes en caso de estar pulsado.
 function pulsarDislike(e) {
-    if (e.target.src != "file:///C:/Users/usuario_ma%C3%B1ana/Desktop/Cliente/Tema%206/examen2/img/disgusto.png") {
+    if (e.target.src.includes("img/disgusto2.png")) {
         e.target.src = "img/disgusto.png";
         contadorDislikes.textContent = dislikes + 1;
     } else{
@@ -35,7 +41,11 @@ function pulsarDislike(e) {
         contadorDislikes.textContent = dislikes;
     }
 }
+
+//EventListener para el boton de contactar
 contactar.addEventListener("click", generarFormulario);
+
+//Función que genera los inputs del formulario y el boton para enviar datos. Estos se incluyen a continuación del botón 'Contactar'
 function generarFormulario(e){
     while (formulario.firstChild) {
         formulario.removeChild(formulario.firstChild);
